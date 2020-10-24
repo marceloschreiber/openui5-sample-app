@@ -6,9 +6,14 @@ This is my fork of [OpenUI5 sample app](https://github.com/SAP/openui5) using [U
 
 I made some modifications that align with the way I like to develop.
 
+### Live demo
+
+You can find a demo deployed to [GitHub Pages](https://marceloschreiber.github.io/openui5-sample-app/index.html).
+
 ## Changes made
 
-- [X] Use Yarn instead of npm.
-- [X] Rename **master** branch to **main**.
-- [X] Add prettier and adjust ESLint.
-- [X] Delete EditorConfig.
+- [x] Use Yarn instead of npm.
+- [x] Rename **master** branch to **main**.
+- [x] Add prettier and adjust ESLint.
+- [x] Delete EditorConfig.
+- [x] Deploy demo to GitHub Pages.
