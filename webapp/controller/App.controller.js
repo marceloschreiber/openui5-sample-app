@@ -23,9 +23,6 @@ sap.ui.define(
         );
       },
 
-      /**
-       * Adds a new todo item to the bottom of the list.
-       */
       addTodo: function () {
         var oModel = this.getView().getModel();
         var aTodos = oModel.getProperty('/todos').map(function (oTodo) {
@@ -41,9 +38,6 @@ sap.ui.define(
         oModel.setProperty('/newTodo', '');
       },
 
-      /**
-       * Removes all completed items from the todo list.
-       */
       clearCompleted: function () {
         var oModel = this.getView().getModel();
         var aTodos = oModel.getProperty('/todos').map(function (oTodo) {
@@ -61,9 +55,6 @@ sap.ui.define(
         oModel.setProperty('/todos', aTodos);
       },
 
-      /**
-       * Updates the number of items not yet completed
-       */
       updateItemsLeftCount: function () {
         var oModel = this.getView().getModel();
         var aTodos = oModel.getProperty('/todos') || [];
@@ -75,17 +66,11 @@ sap.ui.define(
         oModel.setProperty('/itemsLeftCount', iItemsLeft);
       },
 
-      /**
-       * Trigger search for specific items. The removal of items is disable as long as the search is used.
-       * @param {sap.ui.base.Event} oEvent Input changed event
-       */
       onSearch: function (oEvent) {
         var oModel = this.getView().getModel();
 
-        // First reset current filters
         this.aSearchFilters = [];
 
-        // add filter for search
         this.sSearchQuery = oEvent.getSource().getValue();
         if (this.sSearchQuery && this.sSearchQuery.length > 0) {
           oModel.setProperty('/itemsRemovable', false);
@@ -99,13 +84,10 @@ sap.ui.define(
       },
 
       onFilter: function (oEvent) {
-        // First reset current filters
         this.aTabFilters = [];
 
-        // add filter for search
         this.sFilterKey = oEvent.getParameter('item').getKey();
 
-        // eslint-disable-line default-case
         switch (this.sFilterKey) {
           case 'active':
             this.aTabFilters.push(new Filter('completed', FilterOperator.EQ, false));
@@ -132,7 +114,6 @@ sap.ui.define(
           if (this.sFilterKey === 'active') {
             sI18nKey = 'ACTIVE_ITEMS';
           } else {
-            // completed items: sFilterKey = "completed"
             sI18nKey = 'COMPLETED_ITEMS';
           }
           if (this.sSearchQuery) {

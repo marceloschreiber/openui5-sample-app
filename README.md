@@ -17,3 +17,4 @@ You can find a demo deployed to [GitHub Pages](https://marceloschreiber.github.i
 - [x] Add prettier and adjust ESLint.
 - [x] Delete EditorConfig.
 - [x] Deploy demo to GitHub Pages.
+- [x] Remove comments that don't are explaning **what** instead of **why**.
