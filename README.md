@@ -10,3 +10,4 @@ I made some modifications that align with the way I like to develop.
 
 - [X] Use Yarn instead of npm.
 - [X] Rename **master** branch to **main**.
+- [X] Add prettier and adjust ESLint.
