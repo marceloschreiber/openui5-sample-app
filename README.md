@@ -9,3 +9,4 @@ I made some modifications that align with the way I like to develop.
 ## Changes made
 
 - [X] Use Yarn instead of npm.
+- [X] Rename **master** branch to **main**.
